@@ -15,10 +15,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp.router(
       routerConfig: router,
+      theme: ThemeData(scaffoldBackgroundColor: pageBackgroundColor, fontFamily: "InriaSans", canvasColor: Colors.red),
       title: 'Flutter Demo',
-      theme: ThemeData(scaffoldBackgroundColor: pageBackgroundColor, textTheme: GoogleFonts.inriaSansTextTheme(Theme.of(context).textTheme.apply(bodyColor: titleTextColor)), canvasColor: Colors.red),
       builder: (context, child) => ResponsiveBreakpoints.builder(
         child: HomePage(),
         breakpoints: [
